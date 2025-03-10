@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Halaman Beranda</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Syifa Nurrohmah w">
+    <meta name="nim" content="243307115">
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+    }
+    header {
+        background-color: #666;
+        padding: 80px;
+        text-align: center;
+        font-size: 35px;
+        color: white;
+    }
+    nav {
+        float: left;
+        width: 30%;
+        height: 50%;
+        background: #ccc;
+        padding: 20px;
+    }
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin-bottom: 10px;
+    }
+    article {
+        float: left;
+        padding: 20px;
+        width: 70%;
+        background-color: #f1f1f1;
+        height: 100%;    
+    }
+    img {
+        padding: 1px;
+        width: 30%;
+        height: 30%;
+        grid-template-columns: repeat(3);
+    }
+    section::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    footer {
+        background-color: #fcf8f8;
+        padding: 50px;
+        text-align: center;
+        color: rgb(20, 20, 20);
+    }
+    @media(max-width:600px){
+        nav, article{
+                width: 100%;
+                height: auto;
+        }
+    }
+</style>
+<body style="background-color: rgb(238, 240, 238); font-family: sans-serif;">
+    <header>
+        <h1>Judul Website</h1>
+    </header>
+    <section>
+        <nav style="background-color: rgb(179, 174, 174);">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gambar.html">Gambar</a></li>
+                    <li><a href="event.html">Event</a></li>
+                    <li><a href="audio.html">Audio</a></li>
+                    <li><a href="video.html">Video</a></li>
+                    <li><a href="svg.html">SVG</a></li>
+                    <li><a href="canvas.html">Canvas</a></li>
+                    <li><a href="pendaftaran.html">Pendaftaran</a></li>
+                    
+                </ul>
+            </nav>
+            </div>
+            <article>
+                <h2>Gambar Pemandangan</h2>
+                <content>
+                    <img id="gambar" src="gambar.jpg" alt="gambar" onclick="myFunction()">
+                    <img id="gambar1" src="gambar1.jpg" alt="gambar1" onclick="myFunction()">
+                    <img id="gambar2" src="gambar2.jpg" alt="gambar2" onclick="myFunction()">
+                    <img id="gambar4" src="gambar4.jpg" alt="gambar4" onclick="myFunction()">
+                    <img id="gambar5" src="gambar5.jpg" alt="gambar5" onclick="myFunction()">
+                    <img id="gambar6" src="gambar6.jpg" alt="gambar6" onclick="myFunction()">
+                    <p><strong>kesimpulan :jika menggunakan event (onclick) ketika kita mengeklik gambar tersebut,<br>
+                    gambar akan ganti gambar yang lain. Dilengkapi dengan myFunction serta menambahkan script myFunction dengan file Javascript agar berjalan.</strong></p>
+                </content>
+            </article>
+        </section>
+        <footer>
+            <p>@copyright2025IisIstiqomah</p>
+        </footer>
+</body>
+<script src="js/function.js"></script>
+</html>

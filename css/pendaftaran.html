@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Halaman Beranda</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Iis Istiqomah">
+    <meta name="nim" content="243307105">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: green;
+        }
+        fieldset {
+            border: 1px solid #000;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+        header {
+            background-color: #666;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+        nav {
+            float: left;
+            width: 30%;
+            height: auto;
+            background: #ccc;
+            padding: 0;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f1f1f1;
+            height: auto;
+        }
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: black;
+        }
+        @media (max-width: 600px) {
+            nav, article {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Judul Website</h2>
+    </header>
+    <section>
+    <nav style="background-color: rgb(201, 56, 56);">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gambar.html">Gambar</a></li>
+            <li><a href="event.html">Event</a></li>
+            <li><a href="audio.html">Audio</a></li>
+            <li><a href="video.html">Video</a></li>
+            <li><a href="svg.html">SVG</a></li>
+            <li><a href="canvas.html">Canvas</a></li>
+            <li><a href="pendaftaran.html">Pendaftaran</a></li>
+        </ul>
+    </nav>
+    <article>
+        <h1 style="font-size: 35px; font-family: 'Times New Roman', Times, serif;">Form Pendaftaran Pertemuan</h1>
+        <form action="submit_form.php" method="POST">
+            <fieldset>
+                <legend>Informasi Pribadi</legend>
+                <label for="namalengkap">Nama Lengkap</label>
+                <input id="namalengkap" name="namalengkap" type="text" required><br><br>
+
+                <label for="NoTelepon">No. Telepon</label>
+                <input id="NoTelepon" name="NoTelepon" type="tel" placeholder="XXXX-XXXXXX" required><br><br>
+
+                <label for="email">Alamat Email</label>
+                <input type="email" id="email" name="email" placeholder="nama@domain.com" required><br><br>
+
+                <label for="tanggal_lahir">Tanggal Lahir</label>
+                <input type="date" id="tanggal_lahir" name="tanggal_lahir" min="1987-01-01" max="1993-01-01" required><br><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Permintaan Pertemuan</legend>
+                <label for="tujuan">Tujuan Pertemuan</label>
+                <input type="text" id="tujuan" name="tujuan" required><br><br>
+
+                <label for="tingkat">Tingkat Kepentingan Pertemuan</label>
+                <input id="tingkat" name="tingkat" type="range" min="0" max="10" list="tingkat-list">
+                <datalist id="tingkat-list">
+                    <option value="0"></option>
+                    <option value="10"></option>
+                </datalist>
+                <br><br>
+
+                <label for="tanggal">Tanggal</label>
+                <input type="date" id="tanggal" name="tanggal" min="2025-03-09" required><br><br>
+
+                <label for="Waktu">Waktu</label>
+                <input type="time" id="Waktu" name="Waktu" min="17:00" max="21:00" required><br><br>
+            </fieldset>
+
+            <input type="submit" value="Kirim">
+        </form>
+    </article>
+    </section>
+    <footer>
+        <p>@copyright2025IisIstiqomah</p>
+    </footer>
+</body>
+</html>
